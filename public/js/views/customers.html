@@ -1,0 +1,24 @@
+<!--
+ Copyright (c) 2014, 2018, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div id="pagingControl" style="width: 1px; min-width: 100%;">
+     <oj-table id="table" 
+               data='[[pagingDatasource]]'
+               display='grid'
+               columns-default='{"sortable": "enabled"}' 
+                columns='[
+                         {"headerText": "Customer Id", "field": "id"},
+                         {"headerText": "First Name", "field": "first_name"},
+                         {"headerText": "Last Name", "field": "last_name"},
+                         {"headerText": "Phone # ", "field": "phone"}]'
+               style='width: 100%;'>
+               <oj-paging-control 
+                                id="paging"
+                                data='[[pagingDatasource]]' 
+                                page-size='10'
+                                slot='bottom'>
+               </oj-paging-control>
+     </oj-table>
+        
+</div>
